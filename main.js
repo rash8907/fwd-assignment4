@@ -1,4 +1,5 @@
-
+/*can use /category_{category_name}*/
+/*can use /group_{group_name}; more precise*/
 fetch('https://emojihub.herokuapp.com/api/random/group_food_fruit', {
     method: 'GET',
     headers: {'Content-Type': 'application/json'}
@@ -9,7 +10,7 @@ fetch('https://emojihub.herokuapp.com/api/random/group_food_fruit', {
     .then((json) => {
         console.log("breakfast", json.group);
         const emoji = json.htmlCode[0];
-
+        /*breakfast fruit item*/
         const breakfastSpan = document.getElementById('breakfast');
         breakfastSpan.innerHTML = emoji;
     })
@@ -27,7 +28,7 @@ fetch('https://emojihub.herokuapp.com/api/random/group_dishware?', {
     .then((json) => {
         console.log("dish", json.group);
         const emoji = json.htmlCode[0];
-
+        /*dishware or utensil item*/
         const dishSpan = document.getElementById('dish');
         dishSpan.innerHTML = emoji;
     })
@@ -45,7 +46,7 @@ fetch('https://emojihub.herokuapp.com/api/random/group_drink', {
     .then((json) => {
         console.log("drink", json.group);
         const emoji = json.htmlCode[0];
-        
+        /*drink item*/
         const drinkSpan = document.getElementById('drink');
         drinkSpan.innerHTML = emoji;
     })
